@@ -1,0 +1,28 @@
+<!-- Top content -->
+<div class="top-content section-container">
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text">
+                    <h1 class="wow fadeInLeftBig"><strong>Gracias!</strong></h1>
+                    <div class="divider-1 wow fadeInUp"><span></span></div>
+                    <div class="description wow fadeInLeftBig">
+                    	<%= @thanks_message  %>
+
+                        <p>Estos son los usuarios hasta el momento:</p>
+                        
+                        <ul>
+                        <% @all_leads.each do |lead| %>
+                            <li><strong>Email:</strong> <%= lead.email  %> - <strong>Subject:</strong> <%= lead.subject %> - <strong>Message:<strong> <%= lead.message %></li>
+                        <% end %>
+                        </ul>
+
+                    </div>
+                    <div class="top-big-link wow fadeInUp">
+                    	<a class="btn btn-link-1" href="<%= front_index_path %>">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
